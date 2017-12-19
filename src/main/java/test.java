@@ -8,15 +8,15 @@ import java.util.List;
 public class test {
     public static void main(String[] args) {
         try {
-            FacialDetection model = new FacialDetection(/* INSERT API KEY */);
-            BufferedImage testImage = util.readImage("src/main/data/Jason1.jpg");
+            FacialDetection model = new FacialDetection("cf32659fe8f445f8aee00505d5367812");
+            BufferedImage testImage = util.readImage("src/main/data/Kezia1.jpg");
             List<ClarifaiOutput<Prediction>> outputPredictions = model.getPredictions(testImage);
             for(int i = 0; i < outputPredictions.size(); i++) {
                 Concept c = model.getBestConcept(outputPredictions.get(i));
-                System.out.println(c.name());
+                System.out.println("Hi " + c.name());
             }
         } catch (Exception e) {
-            System.out.println("Error");
+            System.out.println(e);
         }
     }
 }
