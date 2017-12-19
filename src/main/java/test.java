@@ -9,7 +9,7 @@ public class test {
     public static void main(String[] args) {
         try {
             FacialDetection model = new FacialDetection("cf32659fe8f445f8aee00505d5367812");
-            BufferedImage testImage = util.readImage("src/main/data/kezia1.jpg");
+            BufferedImage testImage = util.readImage("src/main/data/Jason1.jpg");
             List<ClarifaiOutput<Prediction>> outputPredictions = model.getPredictions(testImage);
             for(int i = 0; i < outputPredictions.size(); i++) {
                 Concept c = model.getBestConcept(outputPredictions.get(i));
