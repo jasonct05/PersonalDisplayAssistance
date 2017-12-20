@@ -6,7 +6,6 @@ public class BackgroundAnalysis {
     private int sma;
 
     public BackgroundAnalysis() {
-        // default value for simple moving average is 5
         this(5);
     }
 
@@ -29,5 +28,6 @@ public class BackgroundAnalysis {
             Find the average rgb per pixel of the bufferedImage input
             simple moving average the color with the class constant c
          */
+        return null;
     }
 }
