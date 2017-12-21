@@ -18,7 +18,7 @@ public class OnboardingProcess {
         }
 
         FacialDetection model = new FacialDetection("cf32659fe8f445f8aee00505d5367812");
-        Concept c = Concept.forName(name);
+        Concept c = Concept.forID(name);
         return model.trainNewConcept(c, bis);
     }
 }

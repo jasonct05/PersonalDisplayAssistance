@@ -5,11 +5,11 @@ import clarifai2.dto.prediction.Prediction;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
-public class test {
+public class main {
     public static void main(String[] args) {
         try {
             FacialDetection model = new FacialDetection("cf32659fe8f445f8aee00505d5367812");
-            OnboardingProcess.addUser("test");
+            OnboardingProcess.addUser("main");
             CameraInput ci = new CameraInput();
             BufferedImage testImage = ci.captureImage();
             List<ClarifaiOutput<Prediction>> outputPredictions = model.getPredictions(testImage);
