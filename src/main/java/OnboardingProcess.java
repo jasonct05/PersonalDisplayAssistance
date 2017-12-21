@@ -11,7 +11,7 @@ public class OnboardingProcess {
         CameraInput ci = new CameraInput();
         BufferedImage[] bis = new BufferedImage[minimumInput];
         for(int i = 0; i < minimumInput; i++) {
-            System.out.println("Taking " + i + "/" + minimumInput + " picture...");
+            System.out.println("Taking " + (i + 1) + "/" + minimumInput + " picture...");
             bis[i] = ci.captureImage();
             System.out.println("...");
             Thread.sleep(delay);
