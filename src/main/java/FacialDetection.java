@@ -48,8 +48,8 @@ public class FacialDetection {
         return bestConcept;
     }
 
-    public boolean addConcept(Concept c, List<BufferedImage> listInput) throws IOException {
-        if (listInput == null || listInput.size() < 10) {
+    public boolean trainNewConcept(Concept c, BufferedImage[] listInput) throws IOException {
+        if (listInput == null || listInput.length < OnboardingProcess.minimumInput) {
             return false;
         }
 
