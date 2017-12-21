@@ -25,6 +25,7 @@ public class main {
                 default:
                     System.out.println("input is not valid");
             }
+            System.out.println();
         }
     }
 
@@ -47,6 +48,7 @@ public class main {
         CameraInput ci = new CameraInput();
         System.out.println("Taking your picture ...");
         BufferedImage testImage = ci.captureImage();
+        System.out.println("Processing your face ...");
         List<ClarifaiOutput<Prediction>> outputPredictions = model.getPredictions(testImage);
         for(int i = 0; i < outputPredictions.size(); i++) {
             Concept c = model.getBestConcept(outputPredictions.get(i));
